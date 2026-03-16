@@ -5,6 +5,6 @@ on:
 jobs:
    demo:
        runs-on: ubuntu-latest
-   steps:
-       - name: Greetings
-	     run: echo "hi hello world"
+       steps:
+         - name: Greetings
+	       run: echo "hi hello world"
