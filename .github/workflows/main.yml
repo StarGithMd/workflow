@@ -1,11 +1,10 @@
 name: md rustam
 on:
    push:
-       branches: [ main ] 
+    branches: [ main ] 
 jobs:
    demo:
-       runs-on: ubuntu-latest
-	   
-       steps:
-         - name: Greetings
-	       run: echo "hi hello world"
+    runs-on: ubuntu-latest   
+    steps:
+      - name: Greetings
+	    run: echo "hi hello world"
