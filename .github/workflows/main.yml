@@ -1,5 +1,4 @@
 name: md rustam
-
 on:
   push:
     branches: [ main ]
