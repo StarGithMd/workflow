@@ -1,0 +1,30 @@
+name: Node JS Build App & Artifacts with CAching
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-app:
+    runs-on: ubuntu-latest
+    steps:
+	  - name: rustam repository 
+	    uses: actions/checkout@v4.2.2
+      
+	  - name: Setup Node JS
+	    uses: actions/setup-node@v4.2.2
+        with:
+		    node-version: 22.x
+			cashe: 'npm'
+			
+	  - name: Install Dependencies
+	    run: npm install
+		
+	  - name: Build Next JS app
+	    run: npm run build
+		
+	  - name: Upload build on Artifacts
+	    uses: action/upload-artifact@v4.6.0
+		with:
+		    name: nextjs-build
+			path: out/
